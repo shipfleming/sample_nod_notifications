@@ -31,7 +31,7 @@ integrations:
         - shiphitchcock1@gmail.com
        # - varsha@shippable.com
       on_start: always
-      on_success: change
+      on_success: always
       on_failure: always
       on_pull_request: always
       
@@ -41,7 +41,7 @@ integrations:
         - "#public-chnl"
         - pvt-channel
       on_start: always
-      on_success: change
+      on_success: always
       on_failure: always
       on_pull_request: always
       
@@ -50,6 +50,6 @@ integrations:
       recipients:
         - "chat.freenode.net#test-cock"
       on_start: always
-      on_success: change
+      on_success: always
       on_failure: always
       on_pull_request: always
