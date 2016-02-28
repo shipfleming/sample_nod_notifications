@@ -15,7 +15,7 @@ build:
     - node --version
     
   pre_ci_boot:
-    image_name: drydock/u12nod
+    image_name: drydock/u12noduytf
     image_tag: prod
     pull: true
     
