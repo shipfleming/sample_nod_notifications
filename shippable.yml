@@ -13,3 +13,39 @@ node_js:
 build:
   ci:
     - node --version
+    
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
+      
+  notifications:
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiphitchcock1@gmail.com
+       # - varsha@shippable.com
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
+    - integrationName: ship-slack
+      type: slack
+      recipients:
+        - "#public-chnl"
+        - pvt-channel
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
+    - integrationName: irc
+      type: irc
+      recipients:
+        - "chat.freenode.net#test-cock"
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
