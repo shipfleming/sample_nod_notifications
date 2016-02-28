@@ -13,6 +13,11 @@ node_js:
 build:
   ci:
     - node --version
+    
+  pre_ci_boot:
+    image_name: drydock/u12nodtyj
+    image_tag: prod
+    pull: true
    
 integrations:
   hub:
