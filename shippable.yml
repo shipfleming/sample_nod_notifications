@@ -15,41 +15,7 @@ build:
     - node --version
     
   pre_ci_boot:
-    image_name: drydock/u12noduytf
+    image_name: drydock/u12nod
     image_tag: prod
     pull: true
-    
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      
-  notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock1@gmail.com
-       # - varsha@shippable.com
-      on_start: never
-      on_success: change
-      on_failure: always
-      on_pull_request: always
-      
-    - integrationName: ship-slack
-      type: slack
-      recipients:
-        - "#public-chnl"
-        - pvt-channel
-      on_start: never
-      on_success: change
-      on_failure: always
-      on_pull_request: always
-      
-    - integrationName: irc
-      type: irc
-      recipients:
-        - "chat.freenode.net#test-cock"
-      on_start: never
-      on_success: change
-      on_failure: always
-      on_pull_request: always
+ 
