@@ -32,8 +32,8 @@ integrations:
        # - varsha@shippable.com
       on_start: never
       on_success: always
-      on_failure: change
-      on_pull_request: always
+      on_failure: always
+      on_pull_request: never
       
     - integrationName: ship-slack
       type: slack
@@ -42,8 +42,8 @@ integrations:
         - pvt-channel
       on_start: never
       on_success: always
-      on_failure: change
-      on_pull_request: always
+      on_failure: always
+      on_pull_request: never
       
     - integrationName: irc
       type: irc
@@ -51,5 +51,5 @@ integrations:
         - "chat.freenode.net#test-cock"
       on_start: never
       on_success: always
-      on_failure: change
-      on_pull_request: always
+      on_failure: always
+      on_pull_request: never
