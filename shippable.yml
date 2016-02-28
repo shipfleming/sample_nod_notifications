@@ -15,10 +15,10 @@ build:
     - node --version
     
   pre_ci_boot:
-    image_name: drydock/u12nodtyj
+    image_name: drydock/u12nod
     image_tag: prod
     pull: true
-    
+ 
 integrations:
   hub:
     - integrationName: ship-docker
@@ -30,8 +30,8 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
        # - varsha@shippable.com
-      on_start: always
-      on_success: always
+      on_start: never
+      on_success: change
       on_failure: always
       on_pull_request: always
       
@@ -40,8 +40,8 @@ integrations:
       recipients:
         - "#public-chnl"
         - pvt-channel
-      on_start: always
-      on_success: always
+      on_start: never
+      on_success: change
       on_failure: always
       on_pull_request: always
       
@@ -49,8 +49,8 @@ integrations:
       type: irc
       recipients:
         - "chat.freenode.net#test-cock"
-      on_start: always
-      on_success: always
+      on_start: never
+      on_success: change
       on_failure: always
       on_pull_request: always
       
