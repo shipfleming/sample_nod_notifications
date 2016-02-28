@@ -30,26 +30,26 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
        # - varsha@shippable.com
-      #on_start: always
-      on_success: never
-      on_failure: never
-      #on_pull_request: always
+      on_start: never
+      on_success: always
+      on_failure: always
+      on_pull_request: never
       
     - integrationName: ship-slack
       type: slack
       recipients:
         - "#public-chnl"
         - pvt-channel
-      #on_start: always
-      on_success: never
-      on_failure: never
-      #on_pull_request: always
+      on_start: never
+      on_success: always
+      on_failure: always
+      on_pull_request: never
       
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock"
-      #on_start: always
-      on_success: never
-      on_failure: never
-      #on_pull_request: alway
+      on_start: never
+      on_success: always
+      on_failure: always
+      on_pull_request: never
