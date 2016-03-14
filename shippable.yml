@@ -30,7 +30,7 @@ integrations:
     - integrationName: ship-slack
       type: slack
       recipients:
-        - "#public-chnl"
+        - "#hitchcock1-public"
         - pvt-channel
       on_start: always
       on_success: always
