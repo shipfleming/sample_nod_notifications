@@ -13,8 +13,8 @@ node_js:
 build:
   ci:
     - node --version
-    - sleep 2m
-    - cs ps
+    #- sleep 2m
+   # - cs ps
     
 integrations:
   notifications:
