@@ -14,7 +14,7 @@ build:
   ci:
     - node --version
    # - sleep 2m
-    #- cs ps
+    - cs ps
     
 integrations:
   notifications:
