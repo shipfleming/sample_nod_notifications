@@ -3,7 +3,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
- # - 0.12
+  - 0.12
   #- 4.2.3
   #- iojs-v1
   #- iojs-v2
@@ -13,7 +13,7 @@ node_js:
 build:
   ci:
     - node --version
-    - sleep 2m
+   # - sleep 2m
     #- cs ps
     
 integrations:
@@ -23,26 +23,26 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
         - varsha@shippable.com
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      #on_start: always
+      #on_success: always
+      #on_failure: always
+      #on_pull_request: always
       
     - integrationName: ship-slack
       type: slack
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      #on_start: always
+      #on_success: always
+      #on_failure: always
+      #on_pull_request: always
       
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock"
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      #on_start: always
+      #on_success: always
+      #on_failure: always
+      #on_pull_request: always
