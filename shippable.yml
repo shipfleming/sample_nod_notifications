@@ -19,7 +19,7 @@ matrix:
   include:
     - node_js: 4.2.3
       env: tt@!=rr
-  allow_failure:
+  allow_failures:
     - node_js: 4.2.3
       
 build:
