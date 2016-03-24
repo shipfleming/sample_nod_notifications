@@ -10,15 +10,15 @@ node_js:
   #- iojs-v3
   #- 5.0
 
-env: 
-  - FOO=Bar
-  - BAR=Foo
+#env: 
+ # - FOO=Bar
+  #- BAR=Foo
 
 #in orderfail for 4.2.3 version
-#matrix:
- # include:
-  #  - node_js: 4.2.3
-   #   env: tt@!=rr
+matrix:
+  include:
+    - node_js: 4.2.3
+      env: tt@!=rr
       
 build:
   ci:
