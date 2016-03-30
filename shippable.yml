@@ -15,12 +15,12 @@ node_js:
   #- BAR=Foo
 
 #in orderfail for 4.2.3 version
-#matrix:
- # include:
-  #  - node_js: 4.2.3
-      #env: tt@!=rr
-  #allow_failures:
-   # - node_js: 4.2.3
+matrix:
+  include:
+    - node_js: 4.2.3
+      env: tt@!=rr
+  allow_failures:
+    - node_js: 4.2.3
       
 build:
   ci:
@@ -36,8 +36,8 @@ integrations:
         - shiphitchcock1@gmail.com
         - varsha@shippable.com
       on_start: always
-      on_success: always
-      on_failure: always
+      on_success: change
+      on_failure: change
       on_pull_request: always
       
     - integrationName: ship-slack
@@ -46,8 +46,8 @@ integrations:
         - "#hitchcock1-public"
         - pvt-channel
       on_start: always
-      on_success: always
-      on_failure: always
+      on_success: change
+      on_failure: change
       on_pull_request: always
       
     - integrationName: irc
@@ -55,8 +55,8 @@ integrations:
       recipients:
         - "chat.freenode.net#test-cock1"
       on_start: always
-      on_success: always
-      on_failure: always  
+      on_success: change
+      on_failure: change
       on_pull_request: always
       
     - integrationName: ship-hipchat
@@ -66,6 +66,6 @@ integrations:
         - '#hitchcock1pvt'
         - '@shiphitchcock1'
       on_start: always
-      on_success: always
-      on_failure: always  
+      on_success: change
+      on_failure: change
       on_pull_request: always
