@@ -1,34 +1,41 @@
-language: node_js
-
-# Version number
-node_js:
-  - 0.10
- # - 0.12
- # - 4.2.3
- # - iojs-v1
-  #- iojs-v2
-  #- iojs-v3
-  #- 5.0
+language: python
+python:
+  - 3.4
+ # - 2.7
 
 env:
   global:
-    - FOO=Bar
-    - BAR=Foo
+    - FOO=FUBU
 
-#in orderfail for 4.2.3 version
-#matrix:
- # include:
-   # - node_js: 4.2.3
-  #    env: tt@!=rr
-  #allow_failures:
-   # - node_js: 4.2.3
+  matrix:
+    - M1=ONE
+
+matrix:
+  include:
+    - python: 2.7
+      env: TEST=FOO
       
 build:
+  
+  pre_ci_boot:
+    image_name: drydock/u12pyt
+    image_tag: tip
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
   ci:
-    - node --version
-   # - sleep 15m
-    #- cs ps
-    
+    - ps -eax
+    - ls -al
+    - pip install -r requirements.txt
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
+    - cp testresults2.xml  ./shippable/testresults
+  
+  on_success:
+    - echo "build success"
+  on_failure:
+    - echo "build failed"
+  
 integrations:
   notifications:
     - integrationName: email
