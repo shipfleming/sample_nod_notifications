@@ -1,3 +1,2 @@
-# sampleNod
-test sample for NodeJS
-  
+# samplePyt
+test sample for Python
