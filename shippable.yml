@@ -16,11 +16,9 @@ env:
     - BAR=Foo
 
 #in orderfail for 4.2.3 version
-matrix:
-  include:
-    - node_js: 4.2.3
-      ci: 
-        - sleep 12m
+#matrix:
+ # include:
+  #  - node_js: 4.2.3
       #env: tt@!=rr
   #allow_failures:
    # - node_js: 4.2.3
