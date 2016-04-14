@@ -12,7 +12,7 @@ node_js:
 
 env:
   global:
-    - FOO=Bar
+    - FOO=Bar  
     - BAR=Foo
 
 #in orderfail for 4.2.3 version
