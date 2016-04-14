@@ -1,7 +1,7 @@
 language: python
 python:
   - 3.4
-  - 3.3
+  #- 3.3
  # - 2.7
 
 env:
@@ -11,10 +11,10 @@ env:
   matrix:
     - M1=ONE
 
-matrix:
-  include:
-    - python: 2.7
-      env: TEST=FOO
+#matrix:
+ # include:
+  #  - python: 2.7
+   #   env: TEST=FOO
       
 build:
   
