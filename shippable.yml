@@ -19,7 +19,8 @@ env:
 matrix:
   include:
     - node_js: 4.2.3
-      ci: sleep 12m
+      ci: 
+        - sleep 12m
       #env: tt@!=rr
   #allow_failures:
    # - node_js: 4.2.3
