@@ -46,7 +46,7 @@ integrations:
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
-      on_start: always
+      on_start: always  
       on_success: always
       on_failure: always
       on_pull_request: always
