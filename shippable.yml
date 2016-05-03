@@ -10,7 +10,7 @@ node_js:
   #- iojs-v3
   #- 5.0
 
-env:
+env:  
   global:
     - FOO=Bar
     - BAR=Foo
