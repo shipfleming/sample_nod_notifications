@@ -4,7 +4,7 @@ language: node_js
 node_js:
 #  - 0.10
   - 0.12
-  - 4.2.3
+#  - 4.2.3
   #- iojs-v1
  # - iojs-v2
   #- iojs-v3
@@ -13,7 +13,7 @@ node_js:
 build:
   ci:
     - node --version
-    - sleep 5m
+    #- sleep 5m
     
   pre_ci_boot:
     image_name: drydock/u12nod
@@ -31,7 +31,7 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
        # - varsha@shippable.com
-      on_start: never
+      on_start: always
       on_success: always
       on_failure: always
       on_pull_request: never
@@ -41,7 +41,7 @@ integrations:
       recipients:
         - "#public-chnl"
         - pvt-channel
-      on_start: never
+      on_start: always
       on_success: always
       on_failure: always
       on_pull_request: never
@@ -50,7 +50,19 @@ integrations:
       type: irc
       recipients:
         - "chat.freenode.net#test-cock1"
-      on_start: never
+      on_start: always
       on_success: always
       on_failure: always
       on_pull_request: always
+      
+    - integrationName: ship-hipchat
+      type: hipchat
+      recipients:
+        - '#hitchcock1'
+        - '#hitchcock1pvt'
+        - '@shiphitchcock1'
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+    
