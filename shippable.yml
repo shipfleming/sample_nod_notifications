@@ -3,7 +3,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
- # - 0.12
+  - 0.12
  # - 4.2.3
   #- iojs-v1
   #- iojs-v2
@@ -26,7 +26,7 @@ env:
 build:
   ci:
     - node --version
-    - sleep 4m
+   # - sleep 4m
     #- cs ps
     
 integrations:
