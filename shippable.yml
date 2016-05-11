@@ -29,7 +29,7 @@ integrations:
         #- API_URL=$SHIPPABLE_API_URL
         #- CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
         - FOO=bar
-        - FIZZ=buzz
+        - BOO=buzz
         
     - integrationName: email
       type: email
