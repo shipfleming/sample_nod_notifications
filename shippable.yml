@@ -21,11 +21,16 @@ build:
     pull: true 
    
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      
   notifications:
+  
+    - integrationName: proj-sampleNod
+      type: webhook
+      payload:
+        #- API_URL=$SHIPPABLE_API_URL
+        #- CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
+        - FOO=bar
+        - FIZZ=buzz
+        
     - integrationName: email
       type: email
       recipients: 
@@ -65,4 +70,3 @@ integrations:
       on_success: always
       on_failure: always
       on_pull_request: always
-    
