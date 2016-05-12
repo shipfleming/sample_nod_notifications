@@ -30,8 +30,10 @@ integrations:
         - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
         - FOO=bar
         - BOO=buzz
-        #- secure: xRHDNDT4HL740HmhWiT0oOjWTL+ZCEAsCp1BgdQuus0YFZu+/JPlGMHhpXvCJX4jUIjhKPZJNCRhX5D3VPQO02hkhz+0TbP1WxwnOR3D7HXLsjaElguqmlxqEcP24nz7mZisXmLMjjNtaNbbMf61RKT6nL5D1bqdD/1jX4feQIh3kU0Q4pOnOxb4WBjjHX4kWphun50db0c223gPNvq0q+LALM7vp4YUaEomeMW7M0G4OiPC1JBTo5c+W8ZK5Q86A7HDwpgoERKxvcNIyIyctdeCqsqtscwODS4dC2qE1oBFG63QsqDMgWgJlErml4blNGRw7/SUKJQY6BQbu6WLlw==
-        
+      on_start: always
+      on_success: always
+      on_failure: never
+      
     - integrationName: email
       type: email
       recipients: 
