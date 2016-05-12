@@ -32,8 +32,8 @@ integrations:
         - FOO=bar
         - BOO=buzz
       on_start: always
-      on_success: always
-      on_failure: never
+      on_success: never
+      on_failure: always
       
     - integrationName: email
       type: email
