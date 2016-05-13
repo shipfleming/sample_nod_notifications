@@ -50,7 +50,7 @@ integrations:
       recipients:
         - "#public-chnl"
         - pvt-channel
-      on_start: always
+      on_start: always  
       on_success: always
       on_failure: always
       on_pull_request: never
