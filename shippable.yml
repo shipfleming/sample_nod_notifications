@@ -12,7 +12,7 @@ node_js:
 
 build:  
   ci:
-    - node --version
+    - node --version 
     #- ps cs
     #- sleep 5m
     
