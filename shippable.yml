@@ -3,7 +3,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  - 0.12
+  #- 0.12
   #- 4.2.3
   #- iojs-v1
  # - iojs-v2   
@@ -32,8 +32,8 @@ integrations:
         - FOO=bar
         - BOO=buzz
       on_start: always
-      on_success: never
-      on_failure: always
+      # on_success: never
+      # on_failure: always
       
     - integrationName: email
       type: email
@@ -41,9 +41,9 @@ integrations:
         - shiphitchcock1@gmail.com
        # - varsha@shippable.com
       on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: never
+      # on_success: always
+      # on_failure: always
+      # on_pull_request: never
       
     - integrationName: ship-slack
       type: slack
@@ -51,18 +51,18 @@ integrations:
         - "#public-chnl"
         - pvt-channel
       on_start: always  
-      on_success: always
-      on_failure: always
-      on_pull_request: never
+      # on_success: always
+      # on_failure: always
+      # on_pull_request: never
       
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock1"
       on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      # on_success: always
+      # on_failure: always
+      # on_pull_request: always
       
     - integrationName: ship-hipchat
       type: hipchat
@@ -71,6 +71,6 @@ integrations:
         - '#hitchcock1pvt'
         - '@shiphitchcock1'
       on_start: always
-      on_success: always
-      on_failure: always 
-      on_pull_request: always    
+      # on_success: always
+      # on_failure: always 
+      # on_pull_request: always    
