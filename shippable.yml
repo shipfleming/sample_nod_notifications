@@ -38,7 +38,7 @@ integrations:
     - integrationName: webhook-resourcesen-image1cnr
       type: webhook
       payload:
-        - versionName=foo
+        - versionName=footest
       on_start: always #if we have only this then we'll receive 2 builds if build is success one for on_start n for on_succes since by default it is always
     #  on_success: never 
       #on_failure: always
