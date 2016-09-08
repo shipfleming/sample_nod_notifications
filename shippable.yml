@@ -26,7 +26,7 @@ env:
 build:
   ci:
     - node --version
-    - sleep 8m
+    - sleep 5m
     #- cs ps
     
 integrations:
