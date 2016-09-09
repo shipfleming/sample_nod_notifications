@@ -75,7 +75,7 @@ integrations:
       on_failure: always 
       on_pull_request: always
       
-    - integrationName: resource-allplversion
+    - integrationName: resource-allplversion
       type: webhook
       payload:
         - versionName=Shippable Run $BUILD_NUMBER 
