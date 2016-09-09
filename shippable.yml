@@ -2,7 +2,7 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.10
+ # - 0.10
   - 0.12
   #- 4.2.3
   #- iojs-v1
@@ -16,10 +16,10 @@ build:
     #- ps cs
     #- sleep 5m
     
-  pre_ci_boot:
-    image_name: drydock/u12nod 
-    image_tag: prod
-    pull: true 
+  # pre_ci_boot:
+  #   image_name: drydock/u12nod 
+  #   image_tag: prod
+  #   pull: true 
    
 integrations:
   notifications:
@@ -73,4 +73,13 @@ integrations:
       on_start: always
       on_success: always
       on_failure: always 
-      on_pull_request: always    
+      on_pull_request: always
+      
+    - integrationName: resource-allplversion
+      type: webhook
+      payload:
+        - versionName=Shippable Run $BUILD_NUMBER 
+      on_start: always
+      on_success: always
+      on_failure: always 
+      on_pull_request: always
